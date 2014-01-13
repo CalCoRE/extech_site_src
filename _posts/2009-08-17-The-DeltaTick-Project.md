@@ -9,3 +9,5 @@ featured: dt.png
 people: Michelle Wilkerson-Jerde, Aditi Wagh, Uri Wilensky
 ---
 DeltaTick was Michelle Wilkerson-Jerde's dissertation work, completed under the direction of Uri Wilensky at the Center for Connected Learning at Northwestern University. It has since been extended by Aditi Wagh, who is currently a doctoral student at the Center.
+
+Visit the project homepage at [http://ccl.northwestern.edu/deltatick](http://ccl.northwestern.edu/deltatick).

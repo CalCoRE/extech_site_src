@@ -21,13 +21,25 @@
 							<br>
 							<section>
 								<header>
+									<h3><a href="#">Project Details</a></h3>
+								</header>
+    								<div class="row half no-collapse">
+										<p style="font-size: .85em; line-spacing: 1.1;">
+											{{ page.people }}
+											{% if page.funding %}<br>{{page.funding}}{% endif %}
+										</p>
+    								</div>
+							</section>
+							<hr />
+							<section>
+								<header>
 									<h3><a href="#">Related News</a></h3>
 								</header>
 								{% for post in site.posts %}
 								    {% if post.project == page.name %}
     								<div class="row half no-collapse">
     									<div class="8u">
-    										<h4>{{ post.title }}</h4>
+    										<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
     									</div><div class="4u" style="float:right;">
     										<a href="{{ post.url }}" class="image full"><img src="{{site.url}}/images/news/{{ post.featured }}" alt="" /></a>
     									</div>

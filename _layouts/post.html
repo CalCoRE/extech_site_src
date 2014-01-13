@@ -13,9 +13,7 @@
 										{{ page.shortform }}
 									</span>
 								</header>
-								{% if page.tags contains 'video' %}
-								<p> {{page.shortform}} </p>
-								<br>
+								{% if page.video_embed %}
 								<div class="video-container">
 								    <iframe src="{{ page.video_embed }}"
 								            frameborder="0"
