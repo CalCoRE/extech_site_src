@@ -1,0 +1,29 @@
+---
+title: Research
+---
+{% include header.html class='research' %}
+<!-- Main -->
+<div class="wrapper style1">
+	<br>
+	<div class="onecol">
+{% for paper in site.posts %}
+    {% if paper.layout == 'paper' %}
+        <div class="row">
+			<p>
+			{{ paper.reference }}
+			{% if paper.link %}
+			[<a href="{{paper.link}}">Link</a>]
+			{% endif %}
+			{% if paper.artifact %}
+			[<a href="{{paper.artifact}}">{{paper.artifact-type}}</a>]
+			{% endif %}
+			{% if paper.paper %}
+			[<a href="{{paper.paper}}">PDF</a>]
+			{% endif %}
+		    </p>
+        </div>
+    {% endif %}
+{% endfor %}
+	</div>
+</div>
+{% include footer.html %}

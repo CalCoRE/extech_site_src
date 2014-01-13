@@ -1,0 +1,79 @@
+{% include header.html class='right-sidebar' %}
+
+			<div class="wrapper style1">
+
+				<div class="container">
+					<div class="row">
+						<div class="8u skel-cell-important" id="content">
+							<article id="main">
+							<br>
+								<header>
+									<h2><a href="#">{{ page.title }}</a></h2>
+									<span class="byline">
+										{{ page.shortform }}
+									</span>
+								</header>
+								{% if page.tags contains 'video' %}
+								<p> {{page.shortform}} </p>
+								<br>
+								<div class="video-container">
+								    <iframe src="{{ page.video_embed }}"
+								            frameborder="0"
+								            allowfullscreen>
+								    </iframe>
+								</div>
+								{% endif %}								
+								<br>
+								<p>
+									{{ content }}
+								</p>
+							</article>
+						</div>
+						<div class="4u" id="sidebar">
+							<hr class="first" />
+							<section style="left-margin:1em;">
+				                <!--<p>
+									Tags: 
+									{% for tag in page.tags %}
+									   {{ tag }} 
+									{% endfor %}
+								</p>-->
+								<br>
+								<header>
+									<h3><a href="#">Related Posts</a></h3>
+								</header>
+								
+								{% for post in site.related_posts limit:5 %}
+    								<div class="row half no-collapse">
+    									<div class="8u">
+    										<h4>{{ post.title }}</h4>
+    									</div><div class="4u" style="float:right;">
+    										<a href="{{ post.url }}" class="image full"><img src="{{site.url}}/images/news/{{ post.featured }}" alt="" /></a>
+    									</div>
+    										<p style="font-size: .85em; line-spacing: 1.1;">
+    											{{ post.shortform }}
+    										</p>
+    								</div>
+    								<br>
+        				        {% endfor %}
+							</section>
+				        </div>
+				        <!--
+						<section>
+						  <hr />
+							<header>
+								<h3><a href="#">More About the Project</a></h3>
+							</header>
+							<p>
+								Here I have a blurb about the project.
+							</p>
+							<footer>
+								<a href="#" class="button">Learn More</a>
+							</footer>
+						</section>-->
+					</div>
+				</div>
+
+			</div>
+			
+{% include footer.html %}

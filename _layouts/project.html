@@ -1,0 +1,46 @@
+{% include header.html class='right-sidebar' %}
+		<!-- Main -->
+			<div class="wrapper style1">
+
+				<div class="container">
+					<div class="row">
+						<div class="8u skel-cell-important" id="content">
+							<article id="main">
+							<br>
+								<header>
+									<h2><a href="#">{{ page.name }}</a></h2>
+									<span class="byline">
+										{{ page.shortform }}
+									</span>
+								</header>
+								{{ content }}
+							</article>
+						</div>
+						<div class="4u" id="sidebar">
+							<hr class="first" />
+							<br>
+							<section>
+								<header>
+									<h3><a href="#">Related News</a></h3>
+								</header>
+								{% for post in site.posts %}
+								    {% if post.project == page.name %}
+    								<div class="row half no-collapse">
+    									<div class="8u">
+    										<h4>{{ post.title }}</h4>
+    									</div><div class="4u" style="float:right;">
+    										<a href="{{ post.url }}" class="image full"><img src="{{site.url}}/images/news/{{ post.featured }}" alt="" /></a>
+    									</div>
+    										<p style="font-size: .85em; line-spacing: 1.1;">
+    											{{ post.shortform }}
+    										</p>
+    								</div>
+    								<br>
+    								{% endif %}
+        				        {% endfor %}
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+{% include footer.html %}

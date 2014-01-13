@@ -1,0 +1,64 @@
+- name: Michelle Wilkerson-Jerde
+  type: faculty
+  title: Assistant Professor
+  affiliation: Tufts University, Education Department
+  image: michelle.jpg
+  links: "http://sites.tufts.edu/michelle"
+
+- name: Brian Gravel
+  type: faculty
+  title: Director, STEM Elementary Program
+  affiliation: Tufts University, Education Department
+  image: brian.jpg
+  links: http://ase.tufts.edu/education/faculty/gravel.asp
+
+- name: Chris Macrander
+  type: current
+  title: PhD Student, Science Education
+  affiliation: Tufts University, STEM Education Program
+  image: chris.jpg
+  links:
+
+#- name: Mirjana Hotomski
+#  type: current
+#  title: PhD Student, Mathematics Education
+#  affiliation: Tufts University, STEM Education Program
+#  image: 
+#  links: http://ase.tufts.edu/education/faculty/gravel.asp
+
+- name: Yara Shaban
+  type: current
+  title: PhD Student, Engineering Education
+  affiliation: Tufts University, STEM Education Program
+  image: yara.jpg
+  links:
+
+- name: Jenna Conversano
+  type: current
+  title: Masters Student, Museum Studies
+  affiliation: Tufts University, Museum Education Program
+  image: jenna.jpg
+  links:
+  
+- name: Amanda Bell
+  type: former
+  image: amanda.jpg
+  links:
+  
+- name: Sabrina Gordon
+  type: former
+  image: sabrina.png
+  links: 
+  
+- name: Margot Krouwer
+  type: former
+  image: margot.jpg
+    
+- name: James Maldonis
+  type: former
+  image: nopic.png
+  links:
+  
+- name: Thomas Snarsky
+  type: former
+  image: nopic.png

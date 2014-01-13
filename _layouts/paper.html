@@ -1,0 +1,99 @@
+{% include header.html class='right-sidebar' %}
+
+			<div class="wrapper style1">
+
+				<div class="container">
+					<div class="row">
+						<div class="8u skel-cell-important" id="content">
+							<article id="main">
+								<br>
+								<header>
+									<h2><a href="#">{{ page.title }}</a></h2>
+									<span class="byline">
+										{{ page.shortform }}
+									</span>
+								</header></br>
+								<p>
+									{{ content }}
+									<br>
+									<h4>Abstract</h4>
+									{{ page.abstract }}
+									<br><br>
+									<h4>Citation</h4>
+									{{ page.reference }}
+								</p>
+							</article>
+						  <hr />
+				            <h3><a href="#">More About the {{ page.project }} Project</a></h3><br>
+                                {% for project in site.posts %}
+                                    {% if project.name == page.project %}
+                                    <div class="row">
+                                        <div class="4u" style="vertical-align:middle;">
+                            				<a href="{{ project.url }}" class="image featured"><img src="{{site.url}}/images/news/{{ project.featured }}" alt="" /></a>
+                            			</div>
+                            			<div class="8u">
+                            				<p>
+                            				{{ project.shortform }}
+                            				</p>
+								            <center><a href="{{ project.url }}" class="button">Learn More</a></center>
+								        </div>
+								    </div>
+								    {% endif %}
+								{% endfor %}
+						</div>
+						<div class="4u" id="sidebar">
+				            <hr class="first" />
+							<br><section>
+							<h3>Download</h3>
+							<center><br>
+				                {% assign nolink = true %}
+    							{% if page.link %}
+    								<a href="{{ page.link }}" class="button">Publisher Link</a><br>
+				                    {% assign nolink = false %}
+    							{% endif %}
+    							{% if page.paper %}
+    								<a href="{{site.url}}/{{page.paper}}" class="button">PDF</a><br>
+				                    {% assign nolink = false %}
+    							{% endif %}
+    							{% if page.artifact %}
+    								<a href="{{site.url}}/{{page.artifact}}" class="button">Download {{page.artifact-type}}</a>
+				                    {% assign nolink = false %}
+    							{% endif %}
+    							{% if nolink %}
+    				                <a href="mailto:extech@tufts.edu?subject=Paper Request: {{page.title}}" class="button">Contact Us</a>
+    							{% endif %}
+							</center></section>
+							<hr />
+							<section style="left-margin:1em;">
+				                <!--<p>
+									Tags: 
+									{% for tag in page.tags %}
+									   {{ tag }} 
+									{% endfor %}
+								</p>-->
+								<br>
+								<header>
+									<h3><a href="#">Related Posts</a></h3>
+								</header>
+								
+								{% for post in site.related_posts limit:5 %}
+    								<div class="row half no-collapse">
+    									<div class="8u">
+    										<h4>{{ post.title }}</h4>
+    									</div><div class="4u" style="float:right;">
+    										<a href="{{ post.url }}" class="image full"><img src="{{site.url}}/images/news/{{ post.featured }}" alt="" /></a>
+    									</div>
+    										<p style="font-size: .85em; line-spacing: 1.1;">
+    											{{ post.shortform }}
+    										</p>
+    								</div>
+    								<br>
+        				        {% endfor %}
+							</section>
+				        </div>
+					</div>
+				</div>
+
+			</div>
+			
+{% include footer.html %}

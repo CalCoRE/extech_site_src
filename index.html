@@ -1,0 +1,46 @@
+---
+title: Expressive Technologies Lab @ Tufts
+---
+
+{% include header.html class='homepage' %}
+			
+		<!-- Main -->
+			<div class="wrapper style2">
+			
+				<article id="main" class="container special">
+				
+					<p><div class="midblurb"><br>
+					We build and study technological toolkits that enable young people to explore complex patterns and problems.
+					To do this, we find ways to connect students' expressive activities - things like storytelling, animation, 
+					and sketching - with the formal tools and languages of math, science, and computation. 
+					<!--<a href="#">Learn More...</a>-->
+					</div></p>
+		          <hr style="top:.5em"/>
+				</article>
+			</div>
+			
+		<!-- Carousel -->
+            <header><center>
+            <h3>Latest News</h3>
+            </center></header>
+			<div class="carousel">
+				<div class="reel">
+                    {% for post in site.posts %}
+                    {% if post.layout contains 'project' %}
+                    {% else %}
+					<article>
+						<header>
+							<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+						</header>
+						<a href="{{ post.url }}" class="image featured"><img src="images/news/{{ post.featured }}" alt="" /></a>
+						<p>{% if artifact.type contains 'video' %}[VIDEO] {% endif %}{{ post.shortform }}</p>							
+					</article>
+					{% endif %}
+					{% endfor %}
+					
+				</div>
+			</div>
+
+		<!-- Footer -->
+
+{% include footer.html %}

@@ -1,0 +1,27 @@
+---
+title: Projects
+---
+{% include header.html class='projects' %}
+<!-- Main -->
+<div class="wrapper style1">
+	<br>
+	<div class="onecol">
+{% for project in site.posts %}
+    {% if project.layout == 'project' %}
+        <div class="row">
+            <div class="4u" style="vertical-align:middle;">
+            <h3 style="text-align:left;"><a href="{{ project.url }}">{{ project.name }}</a></h3>
+				<a href="{{ project.url }}" class="image featured">
+				<img src="{{site.url}}/images/news/{{ project.featured }}" alt="" /></a>
+			</div>
+			<div class="8u">
+				<p>
+				{{ project.midform }}
+			    </p>
+			</div>
+        </div>
+    {% endif %}
+{% endfor %}
+	</div>
+</div>
+{% include footer.html %}

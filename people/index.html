@@ -1,0 +1,136 @@
+---
+title: People
+---
+
+{% include header.html class='people' %}
+			<div class="wrapper style1">
+
+				<!-- Faculty -->
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+							<header>
+								<h3><a href="#"><br>Faculty</a></h3>
+							</header>
+						</div>
+					</div>
+{% for person in site.data.people %}
+    {% if person.type contains 'faculty' %}
+        {% capture col %}{% cycle 'first', 'last' %}{% endcapture %}
+        {% if col == 'first' %}
+                    <div class="row">
+        {% endif %}
+                        <div class="6u">
+                            <div class="row half no-collapse">
+                                <div class="4u">
+                                    <img class="image full" src="{{ site.url }}/images/people/{{ person.image }}" alt="" />
+                                </div>
+                                <div class="8u">
+                                    <h4>{{ person.name }}</h4>
+                                    <p>
+                                        {{ person.title }}<br>
+                                        {{ person.affiliation }}<br>
+                                        {% if person.links %}
+                                        Visit <a href="{{ person.links }}">Personal Site</a>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        {% if col == 'last' %}
+                    </div>
+        {% endif %}
+    {% endif %}
+    {% if col != 'last' and forloop.last %}
+                    </div>
+    {% endif %}
+{% endfor %}
+				</div>
+				
+				<!-- Grads -->
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+							<header>
+								<h3><a href="#"><br>Current Members</a></h2>
+							</header>
+						</div>
+					</div>
+					
+					<!--<div class="row">-->
+{% for person in site.data.people %}
+    {% if person.type contains 'current' %}
+	    {% capture col %}{% cycle 'first', 'last' %}{% endcapture %}
+	    {% if col == 'first' %}
+                    <div class="row">
+	    {% endif %}
+                        <div class="6u">
+                            <div class="row half no-collapse">
+                                <div class="4u">
+                                    <img class="image full" src="{{ site.url }}/images/people/{{ person.image }}" alt="" />
+                                </div>
+                                <div class="8u">
+                                    <h4>{{ person.name }}</h4>
+                                    <p>
+                                        {{ person.title }}<br>
+                                        {{ person.affiliation }}<br>
+                                        {% if person.links %}
+                                        Visit <a href="{{ person.links }}">Personal Site</a>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        {% if col == 'last' %}
+                    </div>
+        {% endif %}
+    {% endif %}
+    {% if col != 'last' and forloop.last %}
+                    </div>
+    {% endif %}
+{% endfor %}
+				
+				<!-- Alumni -->
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+							<header>
+								<h3><a href="#"><br>Alumni</a></h2>
+							</header>
+						</div>
+					</div>
+{% for person in site.data.people %}
+    {% if person.type contains 'former' %}
+        {% capture col %}{% cycle 'first', 'middle', 'last' %}{% endcapture %}
+        {% if col == 'first' %}
+                    <div class="row">
+        {% endif %}
+						<div class="4u">
+							<div class="row half no-collapse">
+								<div class="4u">
+									<img class="image full" src="{{ site.url }}/images/people/{{ person.image }}" alt="" />
+								</div>
+								<div class="8u">
+									<h4>{{ person.name }}</h4>
+									<p>
+										{{ person.title }}<br>
+										{{ person.affiliation }}<br>
+										{% if person.links %}
+										  Visit <a href="{{ person.links }}">Personal Site</a>
+								        {% endif %}
+									</p>
+								</div>
+							</div>
+						</div>
+        {% if col == 'last' %}
+                    </div>
+        {% endif %}
+    {% endif %}
+    {% if col != 'last' and forloop.last %}
+                    </div>
+    {% endif %}
+{% endfor %}
+				</div>
+            </div>
+        </div>
+{% include footer.html %}
