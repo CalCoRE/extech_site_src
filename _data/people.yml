@@ -19,12 +19,12 @@
   image: chris.jpg
   links:
 
-#- name: Mirjana Hotomski
-#  type: current
-#  title: PhD Student, Mathematics Education
-#  affiliation: Tufts University, STEM Education Program
-#  image: 
-#  links: http://ase.tufts.edu/education/faculty/gravel.asp
+- name: Mirjana Hotomski
+  type: current
+  title: PhD Student, Mathematics Education
+  affiliation: Tufts University, STEM Education Program
+  image: mirjana.png
+  links:
 
 - name: Yara Shaban
   type: current
