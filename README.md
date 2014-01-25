@@ -2,6 +2,8 @@ extech_site_src
 ===============
 
 Expressive Technologies jekyll site
+Lives [here](http://extech.tufts.edu)
+Updated when someone reminds me to.
 
 This follows the standard jekyll format, except that I have the config set to run jekyll in 
 the super directory to extech_site_src and output to a directory called extech_site.
