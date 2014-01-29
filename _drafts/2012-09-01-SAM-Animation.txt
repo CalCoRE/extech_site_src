@@ -1,0 +1,26 @@
+2012-09-01-SAM-Animation.md
+
+---
+layout: project
+name: SAM Animation
+funding: NSF IIS-0511965 (2005-2010)
+shortform: SAM Animation…
+midform: 
+homepage: http://samanimation.com
+featured: simsam.png
+people: Brian Gravel, Christopher Macrander, Yara Shaban
+---
+Simulation and analysis are a major part of how scientists and engineers think about, talk about, and test their ideas. How can future scientists and engineers learn this important piece of scientific practice?   
+
+
+The SiMSAM project is a design-based research project where we try to answer that question. One reason we are designing SiMSAM is to use as a research tool that can make new kinds of student thinking available for us to study. We are interested in how, using SiMSAM, students learn to translate their everyday verbal and visual explanations of scientific phenomena into the more formal language of computer simulations and mathematical models. Specifically, we are exploring the questions:   
+
+
+How do middle school students learn to adopt simulation and data analysis technologies as tools of scientific discourse?  
+How can educators and learning environments better support such adoption?
+
+
+Prior research has shown that different technologies (such as stop action motion animation, visually-based simulation environments, and “hotlinked” mathematics environments) have made different pieces of this translation process more accessible to students. We are integrating these prior findings into one environment that we hope will allow learners to explore a continuum from expressing their understandings in an open-ended way to expressing them using the formal languages of science and mathematics.   
+
+
+Find out more at [the project website](http://sites.tufts.edu/simsam).
