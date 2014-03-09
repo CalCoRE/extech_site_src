@@ -52,11 +52,11 @@
 				                    {% assign nolink = false %}
     							{% endif %}
     							{% if page.paper %}
-    								<a href="{{site.url}}/{{page.paper}}" class="button">PDF</a><br>
+    								<a href="{{ page.paper }}" class="button">PDF</a><br>
 				                    {% assign nolink = false %}
     							{% endif %}
     							{% if page.artifact %}
-    								<a href="{{site.url}}/{{page.artifact}}" class="button">Download {{page.artifact-type}}</a>
+    								<a href="{{ page.artifact }}" class="button">Download {{page.artifact-type}}</a>
 				                    {% assign nolink = false %}
     							{% endif %}
     							{% if nolink %}
