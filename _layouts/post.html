@@ -56,19 +56,25 @@
         				        {% endfor %}
 							</section>
 				        </div>
-				        <!--
 						<section>
-						  <hr />
 							<header>
-								<h3><a href="#">More About the Project</a></h3>
-							</header>
-							<p>
-								Here I have a blurb about the project.
-							</p>
-							<footer>
-								<a href="#" class="button">Learn More</a>
-							</footer>
-						</section>-->
+								<h3><a href="{{ project.url }}"><hr />More About the {{ page.project }} Project</a></h3><br>
+                                {% for project in site.posts %}
+                                    {% if project.name == page.project %}
+                                    <div class="row">
+                                        <div class="4u" style="vertical-align:middle;">
+                            				<a href="{{ project.url }}" class="image featured"><img src="{{site.url}}/images/news/{{ project.featured }}" alt="" /></a>
+                            			</div>
+                            			<div class="8u">
+                            				<p>
+                            				{{ project.shortform }}
+                            				</p>
+								            <center><a href="{{ project.url }}" class="button">Learn More</a></center>
+								        </div>
+								    </div>
+								    {% endif %}
+								{% endfor %}
+						</section>
 					</div>
 				</div>
 
