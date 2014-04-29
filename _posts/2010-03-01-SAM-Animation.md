@@ -1,5 +1,3 @@
-2012-09-01-SAM-Animation.md
-
 ---
 layout: project
 name: SAM Animation
