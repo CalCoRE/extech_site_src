@@ -25,7 +25,7 @@ title: Expressive Technologies Lab @ Tufts
             </center></header>
 			<div class="carousel">
 				<div class="reel">
-                    {% for post in site.posts %}
+                    {% for post in site.posts limit:10 %}
                     {% if post.layout contains 'project' %}
                     {% else %}
 					<article>
