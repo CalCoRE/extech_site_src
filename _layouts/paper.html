@@ -79,7 +79,7 @@
 								{% for post in site.related_posts limit:5 %}
     								<div class="row half no-collapse">
     									<div class="8u">
-    										<h4>{{ post.title }}</h4>
+    										<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
     									</div><div class="4u" style="float:right;">
     										<a href="{{ post.url }}" class="image full"><img src="{{site.url}}/images/news/{{ post.featured }}" alt="" /></a>
     									</div>
