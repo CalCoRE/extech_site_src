@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New DeltaTick Resources
-shortform: The DeltaTick simulation toolkit and associated tutorials are now available.
+shortform: Tutorials, resources, downloads and videos are now available for the DeltaTick simulation toolkit. Learn more...
 featured: dt.png
 project: DeltaTick
 ---
