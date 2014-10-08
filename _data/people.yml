@@ -12,11 +12,6 @@
   image: brian.jpg
   links: http://ase.tufts.edu/education/faculty/gravel.asp
 
-- name: Chris Macrander
-  type: former
-  image: chris.jpg
-  links:
-
 - name: Chelsea Andrews
   type: current
   title: PhD Student, Engineering Education
@@ -37,12 +32,31 @@
   affiliation: Tufts University, STEM Education Program
   image: yara.jpg
   links:
+  
+- name: Vasiliki Laina
+  type: current
+  title: PhD Student, Mathematics Education
+  affiliation: Tufts University, STEM Education Program
+  image: mira.jpg
+  links:
+  
+- name: Mahsa Hayeri
+  type: current
+  title: MS Student, Engineering Education
+  affiliation: Tufts University, STEM Education Program
+  image: 
+  links:
 
 - name: Jenna Conversano
   type: current
   title: Masters Student, Museum Studies
   affiliation: Tufts University, Museum Education Program
   image: jenna.jpg
+  links:
+  
+- name: Chris Macrander
+  type: former
+  image: chris.jpg
   links:
   
 - name: Amanda Bell
